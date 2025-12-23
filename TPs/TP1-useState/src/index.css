@@ -26,7 +26,7 @@
 }
 
 
-/* IMAGE CONTAINER */
+
 .image-wrapper {
     width: 100%;
     height: 180px;
@@ -34,12 +34,10 @@
     background: #000;
 }
 
-/* IMAGE */
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* fills card without stretching */
     display: block;
 }
 
