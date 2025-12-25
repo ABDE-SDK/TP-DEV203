@@ -1,35 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Search from './ChercherBar.jsx'
+import Resultat from './ResultatList.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+    const list = [
+        { nom: "banane", type: "fruit" },
+        { nom: "orange", type: "fruit" },
+        { nom: "pomme", type: "fruit" },
+        { nom: "raisins", type: "fruit" },
+        { nom: "kiwi", type: "fruit" },
+        { nom: "tomate", type: "legume" },
+        { nom: "carotte", type: "legume" },
+        { nom: "pomme de terre", type: "legume" },
+        { nom: "navet", type: "legume" },
+        { nom: "poivron", type: "legume" }
+    ]
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const [resultats, setResultat] = useState([]);
+
+    function onChercheSubmitApp(type) {
+        
+        setResultat(list.filter((elm) => elm.type.toUpperCase() === type.toUpperCase()))
+    }
+    return (
+        <>
+            <h1>Composant App</h1>
+            <Search onChercheSubmit={onChercheSubmitApp} />
+            <Resultat resultats={resultats} />
+        </>
+    )
 }
 
 export default App
