@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Search from './ChercherBar.jsx'
 import Resultat from './ResultatList.jsx'
-
 function App() {
     const list = [
         { nom: "banane", type: "fruit" },
@@ -19,7 +18,7 @@ function App() {
     const [resultats, setResultat] = useState([]);
 
     function onChercheSubmitApp(type) {
-        
+
         setResultat(list.filter((elm) => elm.type.toUpperCase() === type.toUpperCase()))
     }
     return (
