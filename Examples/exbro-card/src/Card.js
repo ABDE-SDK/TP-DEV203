@@ -1,5 +1,9 @@
 
 function Card(props) {
+    const handleClick = (e) => {
+        e.currentTarget.style.display = "none";
+        console.log(`you remove ${props.name}`)
+    }
     return (
         <>
 {/* Card to practice compenent */}
@@ -9,7 +13,7 @@ function Card(props) {
                 <p className="card-text">I'm web developer student in CMC BMK</p>
             </div> */}
 {/* Card to practice props */}
-            <div className="card">
+            <div onClick={(e) => handleClick(e)} className="card">
                 <img alt='profile pic' className="card-img" src={props.image} />
                 <h2 className="card-title">{props.name}</h2>
                 <p className="card-text">{props.text}</p>
