@@ -1,4 +1,6 @@
 import Card from './Card.js';
+import Count from './Count.js';
+import CheckInput from './CheckInput.js';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         image={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bvnzGwYxGeYrAdeRc4bCvaE-XuelC53Zug&s'}
         name={'omar elomari'}
         text={"I'm just student"} /> */}
+      <Count />
+      <CheckInput/>
       
     </>
   );

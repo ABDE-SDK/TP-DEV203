@@ -1,5 +1,6 @@
 *{
   margin: 0;
+  padding: 0;
 }
 
 .card{
@@ -16,4 +17,21 @@
   min-width: 150px;
   max-width: 150px;
   margin: 10px auto;
+}
+.count-container{
+  text-align: center;
+
+}
+.count-container div{
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.count-container .btn{
+  font-size: 1.3em;
+  margin: 0 10px;
+  background-color: hsl(59, 97%, 49%);
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 5px;
+  
 }

@@ -2,7 +2,8 @@
 function Card(props) {
     const handleClick = (e) => {
         e.currentTarget.style.display = "none";
-        console.log(`you remove ${props.name}`)
+        console.log(`you remove ${props.name}`);
+    
     }
     return (
         <>
