@@ -1,6 +1,7 @@
 import Card from './Card.js';
 import Count from './Count.js';
 import CheckInput from './CheckInput.js';
+import Select from './Select.js';
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
         name={'omar elomari'}
         text={"I'm just student"} /> */}
       <Count />
-      <CheckInput/>
-      
+      <CheckInput message="ce ci un message"/>
+      <Select options={["Element1", "Element2", "Element3", "Element4", "Element5"]} />
     </>
   );
 }

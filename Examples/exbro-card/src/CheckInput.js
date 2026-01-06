@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-function CheckInput() {
+function CheckInput(props) {
 
     const [name, setName] = useState("")
-    const [age, setAge] = useState()
-    const [message, setMessage] = useState("")
+    const [age, setAge] = useState(0)
+    const [message, setMessage] = useState(props.message)
     const [rank, setRank] = useState("")
     const [gender, setGender] = useState("")
 
@@ -23,6 +23,9 @@ function CheckInput() {
     function handleGender(e) {
         setGender(e.target.value)
     }
+    function handleFocus(){
+        setMessage("")
+    }
 
     return (
         <>
@@ -36,7 +39,7 @@ function CheckInput() {
                     <p>Your age: {age}</p>
                 </div>
                 <div className="input-container">
-                    <textarea value={message} onChange={handleMessage} />
+                    <textarea value={message} onFocus={handleFocus} onChange={handleMessage} />
                     <p>Your message: {message}</p>
                 </div>
                 <div className="input-container">
